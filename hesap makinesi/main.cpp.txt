@@ -1,0 +1,41 @@
+#include <iostream>
+
+int main() {
+    double sayi1, sayi2, sonuc;
+    char islem;
+
+    std::cout << "Birinci sayıyı girin: ";
+    std::cin >> sayi1;
+
+    std::cout << "İkinci sayıyı girin: ";
+    std::cin >> sayi2;
+
+    std::cout << "Yapmak istediğiniz işlemi seçin (+, -, *, /): ";
+    std::cin >> islem;
+
+    if (islem == '+') {
+        sonuc = sayi1 + sayi2;
+        std::cout << "Sonuç: " << sonuc << "\n";
+    }
+    else if (islem == '-') {
+        sonuc = sayi1 - sayi2;
+        std::cout << "Sonuç: " << sonuc << "\n";
+    }
+    else if (islem == '*') {
+        sonuc = sayi1 * sayi2;
+        std::cout << "Sonuç: " << sonuc << "\n";
+    }
+    else if (islem == '/') {
+        if (sayi2 != 0) {
+            sonuc = sayi1 / sayi2;
+            std::cout << "Sonuç: " << sonuc << "\n";
+        } else {
+            std::cout << "Sıfıra bölme hatası!\n";
+        }
+    }
+    else {
+        std::cout << "Geçersiz işlem sembolü girdiniz.\n";
+    }
+
+    return 0;
+}
